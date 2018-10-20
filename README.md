@@ -15,3 +15,7 @@ Nodejs, Pug, Express, MongoDB
 
 ### Thank you
 Special thanks to Jpmorgan and Refugee Hub for giving us the wonderfully rewarding and fun opportunity to deveop an app from scratch for a great cause!
+
+###Running this project 
+Go to the root directory and run node app.js to run the app on localhost:8080.
+
