@@ -1,27 +1,29 @@
 extends layout
 
 block content
-  h1 Welcome.
-  p.lead A boilerplate for Node.js web applications.
+  h1 Welcome
+  p.lead Team 1 Project
   hr
+  .card-deck
+  .card(style='width:2110px;height:420px;background-color:#00c8cc;margin-left: -500px;')
+    .card-body.text-center
+      p.card-text Welcome to our website!
+      
+  br 
+  br
   .row
-    .card.card-body
-        h2 Heading
-        p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-        p
-        a.btn.btn-primary(href='#', role='button') View details »
-    .col-md-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-raised(href='#', role='button') View details »
-    .col-md-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-raised(href='#', role='button') View details »
-    .col-md-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-raised(href='#', role='button') View details »
+  .col-sm-6
+    .card(style='width:250px;height:300px;background-color:#00c8cc;float: left;')
+      .card-body
+        h5.card-title About us
+        p.card-text Learn more about GRSI.
+        a.btn.btn-primary(href='#') Click here
+  .col-sm-6
+    .card(style='width:250px;height:300px;background-color:#00c8cc; float: right;')
+      .card-body
+        h5.card-title Sponsorship
+        p.card-text Over hundreds of people get selected for sponsoring.
+        a.btn.btn-primary(href='#') Become a sponsor
+      br
+    
+
