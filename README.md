@@ -7,11 +7,11 @@ Refugee Road is a mentorship app for global sponsorship of refugees. The goal is
 Nodejs, Pug, Express, MongoDB
 
 ### Authors: 
-> Thomas Bates
-> Joe Huang
-> Zhi Huang
-> Allina Khan
-> Marissa Zhong
+- Thomas Bates,
+- Joe Huang,
+- Zhi Huang
+- Allina Khan
+- Marissa Zhong
 
 ### Thank you
 Special thanks to Jpmorgan and Refugee Hub for giving us the wonderfully rewarding and fun opportunity to deveop an app from scratch for a great cause!
