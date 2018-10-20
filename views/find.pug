@@ -1,4 +1,22 @@
 extends layout
 
 block content
-  h1 Find.
+  .pb-2.mt-2.mb-4.border-bottom
+    h3 Find A Mentor: 
+    p Search below to find a mentor based on desired language, country, and expertise. 
+
+  form(method='POST')
+    input(type='hidden', name='_csrf', value=_csrf)
+    if (unknownUser)
+    .form-group.row
+      //- .offset-md-1.
+      col-md-8.p-1
+        input.form-control(type='text',name='language',id='language',autocomplete='language',autofocus=true, placeholder='Language')
+      col-md-8.p-1
+        input.form-control(type='text',name='country',id='country',autocomplete='country',autofocus=true, placeholder='Country')
+      col-md-8.p-1
+        input.form-control(type='text',name='expertise',id='expertise',autocomplete='expertise',autofocus=true, placeholder='Expertise')
+      col-md-8.p-1
+        button.btn.btn-primary(type='submit')
+          //i.far.fa-envelope.fa-sm
+          | Search!
