@@ -1,3 +1,5 @@
+const User = require('../models/User');
+
 /**
  * GET /
  * Find a Mentor page.
@@ -7,3 +9,11 @@ exports.find = (req, res) => {
       title: 'Find a Mentor'
     });
   };
+
+exports.findMentor = (req,res,next) => {
+	User.find({language: req.language}, (err,users) =>{
+		if(err){ next(err); }
+		res.send(users);
+	});		
+	return;
+}
