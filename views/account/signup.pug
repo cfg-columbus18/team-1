@@ -38,31 +38,31 @@ block content
       label.col-md-3.col-form-label.font-weight-bold.text-right(for='phone') Preferred Contact Method
       .col-md-4
         .form-check.form-check-inline
-          input#gridRadios1.form-check-input(type='radio', name='gridRadios', value='email', checked='')
+          input#gridRadios1.form-check-input(type='radio', name='email-prefer', value='email', checked='')
           label.form-check-label(for='email-prefer')
             | Email
         .form-check.form-check-inline
-          input#gridRadios2.form-check-input(type='radio', name='gridRadios', value='phone')
+          input#gridRadios2.form-check-input(type='radio', name='phone-prefer', value='phone')
           label.form-check-label(for='phone-prefer')
             | Phone
         .form-check.form-check-inline
-          input#gridRadios2.form-check-input(type='radio', name='gridRadios', value='skype')
+          input#gridRadios2.form-check-input(type='radio', name='skype-prefer', value='skype')
           label.form-check-label(for='skype-prefer')
             | Skype
         .form-check.form-check-inline
-          input#gridRadios2.form-check-input(type='radio', name='gridRadios', value='google')
+          input#gridRadios2.form-check-input(type='radio', name='google-prefer', value='google')
           label.form-check-label(for='google-prefer')
             | Google Hangouts
         .form-check.form-check-inline
-          input#gridRadios2.form-check-input(type='radio', name='gridRadios', value='facebook')
+          input#gridRadios2.form-check-input(type='radio', name='facebook-prefer', value='facebook')
           label.form-check-label(for='facebook-prefer')
             | Facebook
         .form-check.form-check-inline
-          input#gridRadios2.form-check-input(type='radio', name='gridRadios', value='whatsapp')
+          input#gridRadios2.form-check-input(type='radio', name='whatsapp-prefer', value='whatsapp')
           label.form-check-label(for='whatsapp-prefer')
             | WhatsApp
         .form-check.form-check-inline
-          input#gridRadios2.form-check-input(type='radio', name='gridRadios', value='viber')
+          input#gridRadios2.form-check-input(type='radio', name='viber-prefer', value='viber')
           label.form-check-label(for='viber-prefer')
             | Viber
     br
@@ -128,74 +128,74 @@ block content
       label.col-md-3.col-form-label.font-weight-bold.text-right(for='language') Languages
       .col-md-4
         .form-check.form-check-inline
-          input#invalidCheck.form-check-input(type='checkbox', value='english')
+          input#invalidCheck.form-check-input(type='checkbox', name='english', value='english')
           label.form-check-label(for='invalidCheck')
             | English
         .form-check.form-check-inline
-          input#invalidCheck.form-check-input(type='checkbox', value='spanish')
+          input#invalidCheck.form-check-input(type='checkbox', name='spanish',  value='spanish')
           label.form-check-label(for='invalidCheck')
             | Spanish
         .form-check.form-check-inline
-          input#invalidCheck.form-check-input(type='checkbox', value='arabic')
+          input#invalidCheck.form-check-input(type='checkbox', name='arabic',  value='arabic')
           label.form-check-label(for='invalidCheck')
             | Arabic
         .form-check.form-check-inline
-          input#invalidCheck.form-check-input(type='checkbox', value='french')
+          input#invalidCheck.form-check-input(type='checkbox', name='french',  value='french')
           label.form-check-label(for='invalidCheck')
             | French
         .form-check.form-check-inline
-          input#invalidCheck.form-check-input(type='checkbox', value='portuguese')
+          input#invalidCheck.form-check-input(type='checkbox', name='portuguese',  value='portuguese')
           label.form-check-label(for='invalidCheck')
             | Portuguese
         .form-check.form-check-inline
-          input#invalidCheck.form-check-input(type='checkbox', value='chinese')
+          input#invalidCheck.form-check-input(type='checkbox', name='chinese',  value='chinese')
           label.form-check-label(for='invalidCheck')
             | Chinese
         .form-check.form-check-inline
-          input#invalidCheck.form-check-input(type='checkbox', value='hindi')
+          input#invalidCheck.form-check-input(type='checkbox', name='hindi',  value='hindi')
           label.form-check-label(for='invalidCheck')
             | Hindi
         .form-check.form-check-inline
-          input#invalidCheck.form-check-input(type='checkbox', value='russian')
+          input#invalidCheck.form-check-input(type='checkbox', name='russian',  value='russian')
           label.form-check-label(for='invalidCheck')
             | Russian
     .form-group.row
       label.col-md-3.col-form-label.font-weight-bold.text-right(for='expertise') Areas of Expertise (or for mentees, areas in which you are seeking mentorship)
       .col-md-7
         .form-check.form-check-inline
-          input#invalidCheck.form-check-input(type='checkbox', value='expertise-1')
+          input#invalidCheck.form-check-input(type='checkbox', name='app-process', value='expertise-1')
           label.form-check-label(for='invalidCheck')
             | Application process
         .form-check.form-check-inline
-          input#invalidCheck.form-check-input(type='checkbox', value='expertise-2')
+          input#invalidCheck.form-check-input(type='checkbox', name='pre-depart', value='expertise-2')
           label.form-check-label(for='invalidCheck')
             | Logistical support pre-departure
         .form-check.form-check-inline
-          input#invalidCheck.form-check-input(type='checkbox', value='expertise-3')
+          input#invalidCheck.form-check-input(type='checkbox', name='post-depart', value='expertise-3')
           label.form-check-label(for='invalidCheck')
             | Logistical support post-departure
         .form-check.form-check-inline
-          input#invalidCheck.form-check-input(type='checkbox', value='expertise-4')
+          input#invalidCheck.form-check-input(type='checkbox', name='nav-services', value='expertise-4')
           label.form-check-label(for='invalidCheck')
             | Navigating services (e.g. health, education, etc.)
         .form-check.form-check-inline
-          input#invalidCheck.form-check-input(type='checkbox', value='expertise-5')
+          input#invalidCheck.form-check-input(type='checkbox', name='emo-support', value='expertise-5')
           label.form-check-label(for='invalidCheck')
             | Emotional support/guidance
         .form-check.form-check-inline
-          input#invalidCheck.form-check-input(type='checkbox', value='expertise-6')
+          input#invalidCheck.form-check-input(type='checkbox', name='cross-cultural', value='expertise-6')
           label.form-check-label(for='invalidCheck')
             | Cross-cultural communication
         .form-check.form-check-inline
-          input#invalidCheck.form-check-input(type='checkbox', value='expertise-7')
+          input#invalidCheck.form-check-input(type='checkbox', name='conflict', value='expertise-7')
           label.form-check-label(for='invalidCheck')
             | Conflict within your group
         .form-check.form-check-inline
-          input#invalidCheck.form-check-input(type='checkbox', value='expertise-8')
+          input#invalidCheck.form-check-input(type='checkbox', name='expectations', value='expertise-8')
           label.form-check-label(for='invalidCheck')
             | Managing expectations of sponsored refugees and the group
         .form-check.form-check-inline
-          input#invalidCheck.form-check-input(type='checkbox', value='expertise-9')
+          input#invalidCheck.form-check-input(type='checkbox', name='transition-out', value='expertise-9')
           label.form-check-label(for='invalidCheck')
             | Transitioning out of sponsorship
     .form-group.row
