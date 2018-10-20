@@ -7,3 +7,9 @@ exports.find = (req, res) => {
       title: 'Find a Mentor'
     });
   };
+
+exports.mentorslist = (req,res) => {
+  res.render('mentorslist', {
+
+  });
+};

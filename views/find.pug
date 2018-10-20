@@ -3,9 +3,9 @@ extends layout
 block content
   .pb-2.mt-2.mb-4.border-bottom
     h3 Find A Mentor: 
-    p Search below to find a mentor based on desired language, country, and expertise. 
+    p Search below to find a mentor based on desired language, country, and expertise. Find a mentor according to your personal preferences!
 
-  form(method='POST')
+  form(method='PUT')
     input(type='hidden', name='_csrf', value=_csrf)
     if (unknownUser)
     .form-group.row
@@ -59,6 +59,7 @@ block content
             | Transitioning out of sponsorship
       col-md-8.p-1
         p
-        button.btn.btn-primary(type='submit')
-          //i.far.fa-envelope.fa-sm
+        button.btn.btn-primary(type='Search', href='')
           | Search
+
+
