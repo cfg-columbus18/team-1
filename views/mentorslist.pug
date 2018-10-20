@@ -3,8 +3,8 @@ extends layout
 block content
   br
   .pb-2.mt-2.mb-4.border-bottom
-    h3(style='color: #00c8cc') Find A Mentor: 
-    p Pick a mentor and await their approval! 
+    h3(style='color: #00c8cc') Find A Mentor:
+    p Pick a mentor and await their approval!
   .container
     .row
       if users
@@ -12,6 +12,5 @@ block content
           .card.text-center(style='width: 18rem; height: 18rem;  padding: 2rem; margin:1rem;')
               .card-body
               h5.card-title Pic
-              p.card-text #{user.firstname}, expertise, country, language, sponsors
+              p.card-text #{user.firstName}, Expertise: #{user.expertise[0]}, Country: #{user.country}, Language:#{user.language[0]}
           |
-          

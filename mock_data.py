@@ -17,7 +17,7 @@ country_list =['USA','Canada','Argentina']
 sponsor_list = ['Forming Sponsorship Group','Application in Process','Application Submitted - Awaiting Approval','Application Submitted - Approved','Post-Arrival']
 contact_list = ['email','phone','skype','google hangout','facebook','whatsapp','viber']
 type_list=[0,0,0,0,1,1,1,1,1,1]
-num_of_mock =1000
+num_of_mock = 10000
 
 
 # code to populate user cred
@@ -42,7 +42,7 @@ for document in users.find():
     document['contact'] = choice(contact_list)
     document['city'] = "CITY"
     document['state'] = "STATE"
-    document['country'] = "COUNTRY"
+    document['country'] = choice(country_list)
     if document['type'] == 1:
         document['num_sponsored'] = choice(range(2,6))
         document['num_mentee'] = choice(range(1,6))
