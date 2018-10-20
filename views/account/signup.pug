@@ -7,11 +7,11 @@ block content
   form(id='signup-form', method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
     .form-group.row
-      h4 User Information
+      h4.offset-md-3 User Information
     .form-group.row
-      label.col-md-3.col-form-label.font-weight-bold.text-right(for='username') Username
+      label.col-md-3.col-form-label.font-weight-bold.text-right(for='email') Email
       .col-md-4
-        input.form-control(type='username', name='username', id='username', placeholder='username', autofocus, autocomplete='username', required)
+        input.form-control(type='email', name='email', id='email', placeholder='email', autofocus, autocomplete='email', required)
     .form-group.row
       label.col-md-3.col-form-label.font-weight-bold.text-right(for='password') Password
       .col-md-4
@@ -20,18 +20,16 @@ block content
       label.col-md-3.col-form-label.font-weight-bold.text-right(for='confirmPassword') Confirm Password
       .col-md-4
         input.form-control(type='password', name='confirmPassword', id='confirmPassword', placeholder='confirm password', autocomplete='new-password', required)
+    br
+    br
     .form-group.row
-      h4 Personal Information
+      h4.offset-md-3 Personal Information
     .form-group.row
       label.col-md-3.col-form-label.font-weight-bold.text-right(for='name') Name
       .col-md-3
         input.form-control(type='name', name='first-name', id='first-name', placeholder='first name', autofocus, autocomplete='john', required)
       .col-md-3
         input.form-control(type='name', name='last-name', id='last-name', placeholder='last name', autofocus, autocomplete='smith', required)
-    .form-group.row
-      label.col-md-3.col-form-label.font-weight-bold.text-right(for='email') Email
-      .col-md-6
-        input.form-control(type='email', name='email', id='email', placeholder='email', autofocus, autocomplete='email', required)
     .form-group.row
       label.col-md-3.col-form-label.font-weight-bold.text-right(for='phone') Phone Number
       .col-md-3
@@ -67,8 +65,10 @@ block content
           input#gridRadios2.form-check-input(type='radio', name='gridRadios', value='viber')
           label.form-check-label(for='viber-prefer')
             | Viber
+    br
+    br
     .form-group.row
-      h4 Location
+      h4.offset-md-3 Location
     .form-group.row
       label.col-md-3.col-form-label.font-weight-bold.text-right(for='City') City
       .col-md-3
@@ -112,8 +112,10 @@ block content
           option Canada Newfoundland Time (GMT-3:30)
           option Brazil Eastern Time (GMT-3:00)
           option Central African Time (GMT-1:00)
+    br
+    br
     .form-group.row
-      h4 Background and Skills
+      h4.offset-md-3 Background and Skills
     .form-group.row
       label.col-md-3.col-form-label.font-weight-bold.text-right(for='previous-sponsorships') Number of Previous Sponsorships
       .col-md-1
