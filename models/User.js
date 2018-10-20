@@ -16,7 +16,19 @@ const userSchema = new mongoose.Schema({
   linkedin: String,
   steam: String,
   tokens: Array,
-
+  
+  firstName: String,
+    lastName: String,
+    phone: String,
+    city: String,
+    state: String,
+    country: String,
+    time_zone: Number,
+    num_mentee: Number,
+    expertise: Array,
+    sponsoring: Number,
+    language: Array,
+    contact: Array,
   profile: {
     name: String,
     gender: String,
