@@ -11,17 +11,18 @@ exports.find = (req, res) => {
   };
 
 exports.mentorslist = (req,res) => {
-  res.render('mentorslist', {
-
+  console.log(users);
+	res.render('mentorslist', {
   });
 };
 
 exports.findMentor = (req,res) => {
 	console.log("It is reaching here");
-	User.find({language: req.language}, (err,users) =>{
+	User.find({language :req.language,expertise:{$all:req.expertise}, type:1}, (err,users) =>{
 		if(err){ return console.log(err); }
+		console.log(users);
 		res.render('mentorslist', {
-			users: users
+			'users': users
 		});
 	});		
 	return;
