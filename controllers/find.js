@@ -16,11 +16,12 @@ exports.mentorslist = (req,res) => {
   });
 };
 
-exports.findMentor = (req,res,next) => {
+exports.findMentor = (req,res) => {
+	console.log("It is reaching here");
 	User.find({language: req.language}, (err,users) =>{
-		if(err){ next(err); }
+		if(err){ return console.log(err); }
 		res.render('mentorslist', {
-			'users': users
+			users: users
 		});
 	});		
 	return;

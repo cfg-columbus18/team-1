@@ -131,7 +131,7 @@ app.get('/', homeController.index);
 app.get('/mentorslist', findController.mentorslist);
 app.get('/about', homeController.about);
 app.get('/find', findController.find);
-app.post('/find',findController.findMentor);
+app.get('/findMentor',findController.findMentor);
 app.get('/learn', learnController.learn);
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
