@@ -13,7 +13,9 @@ exports.find = (req, res) => {
 exports.findMentor = (req,res,next) => {
 	User.find({language: req.language}, (err,users) =>{
 		if(err){ next(err); }
-		res.send(users);
+		res.render('mentorslist', {
+			users: users
+		});
 	});		
 	return;
 }
