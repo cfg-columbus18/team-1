@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema({
   linkedin: String,
   steam: String,
   tokens: Array,
-  
+
   firstName: String,
     lastName: String,
     phone: String,
@@ -29,6 +29,7 @@ const userSchema = new mongoose.Schema({
     sponsoring: Number,
     language: Array,
     contact: Array,
+    bio: String,
   profile: {
     name: String,
     gender: String,

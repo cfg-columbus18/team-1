@@ -17,7 +17,7 @@ country_list =['USA','Canada','Argentina']
 sponsor_list = ['Forming Sponsorship Group','Application in Process','Application Submitted - Awaiting Approval','Application Submitted - Approved','Post-Arrival']
 contact_list = ['email','phone','skype','google hangout','facebook','whatsapp','viber']
 type_list=[0,0,0,0,1,1,1,1,1,1]
-num_of_mock =100
+num_of_mock =1000
 
 
 # code to populate user cred
@@ -33,6 +33,9 @@ for i in range(num_of_mock):
 # code to populate different aspect of user
 for document in users.find():
     id = document["_id"]
+    document['firstName'] = 'John'
+    document['lastName'] = 'Doe'
+    document['bio'] = 'Community-based sponsorship programs allow individuals to directly engage in refugee resettlement efforts. Sponsors commit to providing financial, emotional and resettlement support to help newly-arrived refugees integrate into life in a new country.'
     document['time_zone'] = choice(time_zone_list)
     document['language'] = random.sample(language_list, choice(range(1,3)))
     document['expertise'] = random.sample(expertise_list, choice(range(1,5)))
