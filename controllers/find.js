@@ -13,7 +13,7 @@ exports.find = (req, res) => {
 exports.findMentor = (req,res,next) => {
 	User.find({language: req.language}, (err,users) =>{
 		if(err){ next(err); }
-		res.render('mentorslist', {
+		res.render('mentorslist/', {
 			users: users
 		});
 	});		
