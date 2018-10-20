@@ -128,6 +128,7 @@ app.use('/webfonts', express.static(path.join(__dirname, 'node_modules/@fortawes
  * Primary app routes.
  */
 app.get('/', homeController.index);
+app.get('/mentorslist', findController.mentorslist);
 app.get('/about', homeController.about);
 app.get('/find', findController.find);
 app.post('/find',findController.findMentor);
