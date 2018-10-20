@@ -3,9 +3,9 @@ extends layout
 block content
   .pb-2.mt-2.mb-4.border-bottom
     h3 Find A Mentor: 
-    p Search below to find a mentor based on desired language, country, and expertise. 
+    p Search below to find a mentor based on desired language, country, and expertise. Find a mentor according to your personal preferences!
 
-  form(method='POST')
+  form(method='PUT')
     input(type='hidden', name='_csrf', value=_csrf)
     if (unknownUser)
     .form-group.row
@@ -24,41 +24,49 @@ block content
           label.form-check-label(for='invalidCheck')
             | Application process
         |
+        br
         .form-check.form-check-inline
           input#invalidCheck.form-check-input(type='checkbox', value='expertise-2')
           label.form-check-label(for='invalidCheck')
             | Logistical support pre-departure
-            
+        br    
         .form-check.form-check-inline
           input#invalidCheck.form-check-input(type='checkbox', value='expertise-3')
           label.form-check-label(for='invalidCheck')
             | Logistical support post-departure
+        br
         .form-check.form-check-inline
           input#invalidCheck.form-check-input(type='checkbox', value='expertise-4')
           label.form-check-label(for='invalidCheck')
             | Navigating services (e.g. health, education, etc.)
+        br
         .form-check.form-check-inline
           input#invalidCheck.form-check-input(type='checkbox', value='expertise-5')
           label.form-check-label(for='invalidCheck')
             | Emotional support/guidance
+        br
         .form-check.form-check-inline
           input#invalidCheck.form-check-input(type='checkbox', value='expertise-6')
           label.form-check-label(for='invalidCheck')
             | Cross-cultural communication
+        br
         .form-check.form-check-inline
           input#invalidCheck.form-check-input(type='checkbox', value='expertise-7')
           label.form-check-label(for='invalidCheck')
             | Conflict within your group
+        br
         .form-check.form-check-inline
           input#invalidCheck.form-check-input(type='checkbox', value='expertise-8')
           label.form-check-label(for='invalidCheck')
             | Managing expectations of sponsored refugees and the group
+        br
         .form-check.form-check-inline
           input#invalidCheck.form-check-input(type='checkbox', value='expertise-9')
           label.form-check-label(for='invalidCheck')
             | Transitioning out of sponsorship
       col-md-8.p-1
         p
-        button.btn.btn-primary(type='submit')
-          //i.far.fa-envelope.fa-sm
+        button.btn.btn-primary(type='Search', href='')
           | Search
+
+
