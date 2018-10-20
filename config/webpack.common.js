@@ -22,7 +22,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.js', '.json', '.css', '.scss', '.html', '.jsx'],
+    extensions: ['.js', '.json', '.css', '.scss', '.html'],
     alias: {
       'app': 'client/app'
     }
@@ -36,11 +36,7 @@ module.exports = {
         include: helpers.root('client'),
         loader: 'babel-loader'
       },
-      // CSS files
-      {
-        test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ],
-      },
+
       // SCSS files
       {
         test: /\.scss$/,
