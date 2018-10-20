@@ -1,5 +1,4 @@
 .navbar.navbar-light.fixed-top.navbar-expand-md
-  style
   .container
     a.navbar-brand(href='/')
       i.fas.fa-spinner
@@ -11,17 +10,17 @@
       ul.nav.navbar-nav
         li.nav-item(class=(title === 'Home') ? 'active' : undefined)
           a.nav-link(href='/') Home
-        li.nav-item(class=(title === 'API Examples') ? 'active' : undefined)
-          a.nav-link(href='/api') Forum
-        li.nav-item(class=(title === 'Contact') ? 'active' : undefined)
-          a.nav-link(href='/contact') Contact
-        li.nav-item(class=(title === 'Status') ? 'active' : undefined)
-          a.nav-link(href='/status') Status
+        li.nav-item(class=(title === 'About') ? 'active' : undefined)
+          a.nav-link(href='/about') About
+        li.nav-item(class=(title === 'Learn') ? 'active' : undefined)
+          a.nav-link(href='/learn') Learn
+        li.nav-item(class=(title === 'Find A Mentor') ? 'active' : undefined)
+          a.nav-link(href='/find') Find A Mentor
       ul.nav.navbar-nav.ml-auto
         if !user
-          li.nav-item(class=(title === 'Login') ? 'active' : undefined)
+          li.nav-item(class=(title === 'Log In') ? 'active' : undefined)
             a.nav-link(href='/login') Login
-          li.nav-item(class=(title === 'Create Account') ? 'active' : undefined)
+          li.nav-item(class=(title === 'Sign Up') ? 'active' : undefined)
             a.nav-link(href='/signup') Create Account
         else
           li.dropdown(class=(title === 'Account Management') ? 'active' : undefined).nav-item

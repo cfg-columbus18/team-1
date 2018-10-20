@@ -1,9 +1,7 @@
 extends layout
 
 block content
-  h1 Welcome
-  p.lead Team 1 Project
-  hr
+  
   .card-deck
   .card(style='width:2110px;height:420px;background-color:#00c8cc;margin-left: -500px; font-size: 100px;')
     .card-body.text-center
@@ -17,24 +15,41 @@ block content
        .card-body
           h5.card-title About us
           p.card-text Learn more about Global Refugee Sponsorship Initiative.
-          a.btn.btn-primary(href='/contact') Click here
+          a.btn.btn-primary(href='about') Click here
     .col
       .card(style='width:250px;height:300px;background-color:#00c8cc; float: left;')
         .card-body
           h5.card-title Sponsorship
           p.card-text Over hundreds of people get selected for sponsoring. Sign-up for sponsorship today!
-          a.btn.btn-primary(href='/contact') Become a sponsor
+          a.btn.btn-primary(href='signup') Become a sponsor
     .col
       .card(style='width:250px;height:300px;background-color:#00c8cc; float: left;')
         .card-body
           h5.card-title Mentorship
           p.card-text Sign-up to become a mentor today!
-          a.btn.btn-primary(href='/signup') Become a mentor
+          a.btn.btn-primary(href='signup') Become a mentor
     .col
       .card(style='width:250px;height:300px;background-color:#00c8cc; float: left;')
         .card-body
           h5.card-title Resources
           p.card-text The Global Refugee Sponsorship Initiative (GRSI) provides public education about community sponsorship of refugees around the world through a series of videos and educational tools.
-          a.btn.btn-primary(href='/contact') Click here  
-    
-
+          a.btn.btn-primary(href='learn') Click here
+  
+    .col-2
+      .card(style='width:350px;height:300px;background-color:#fa8300; margin- left: 50px;')
+        .card-body
+          h5.card-title Resources
+          p.card-text The Global Refugee Sponsorship Initiative (GRSI) provides public education about community sponsorship of refugees around the world through a series of videos and educational tools.
+          a.btn.btn-primary(href='learn') Click here 
+    .col-2
+      .card(style='width:350px;height:300px;background-color:#d90051;')
+        .card-body
+          h5.card-title Resources
+          p.card-text The Global Refugee Sponsorship Initiative (GRSI) provides public education about community sponsorship of refugees around the world through a series of videos and educational tools.
+          a.btn.btn-primary(href='learn') Click here
+    .col-2
+      .card(style='width:350px;height:300px;background-color:#00c8cc;')
+        .card-body
+          h5.card-title Resources
+          p.card-text The Global Refugee Sponsorship Initiative (GRSI) provides public education about community sponsorship of refugees around the world through a series of videos and educational tools.
+          a.btn.btn-primary(href='learn') Click here  

@@ -3,21 +3,210 @@ extends ../layout
 block content
   .pb-2.mt-2.mb-4.border-bottom
     h3 Sign up
+    p Thank you so much for your interest in supporting refugees. In order to find the best matches between mentors and mentees, please provide as much information below as possible.  
   form(id='signup-form', method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
     .form-group.row
+      h4.offset-md-3 User Information
+    .form-group.row
       label.col-md-3.col-form-label.font-weight-bold.text-right(for='email') Email
-      .col-md-7
-        input.form-control(type='email', name='email', id='email', placeholder='Email', autofocus, autocomplete='email', required)
+      .col-md-4
+        input.form-control(type='email', name='email', id='email', placeholder='email', autofocus, autocomplete='email', required)
     .form-group.row
       label.col-md-3.col-form-label.font-weight-bold.text-right(for='password') Password
-      .col-md-7
-        input.form-control(type='password', name='password', id='password', placeholder='Password', autocomplete='new-password', required)
+      .col-md-4
+        input.form-control(type='password', name='password', id='password', placeholder='password', autocomplete='new-password', required)
     .form-group.row
       label.col-md-3.col-form-label.font-weight-bold.text-right(for='confirmPassword') Confirm Password
+      .col-md-4
+        input.form-control(type='password', name='confirmPassword', id='confirmPassword', placeholder='confirm password', autocomplete='new-password', required)
+    br
+    br
+    .form-group.row
+      h4.offset-md-3 Personal Information
+    .form-group.row
+      label.col-md-3.col-form-label.font-weight-bold.text-right(for='name') Name
+      .col-md-3
+        input.form-control(type='name', name='first-name', id='first-name', placeholder='first name', autofocus, autocomplete='john', required)
+      .col-md-3
+        input.form-control(type='name', name='last-name', id='last-name', placeholder='last name', autofocus, autocomplete='smith', required)
+    .form-group.row
+      label.col-md-3.col-form-label.font-weight-bold.text-right(for='phone') Phone Number
+      .col-md-3
+        input.form-control(type='phone', name='phone', id='phone', placeholder='phone', autofocus, autocomplete='phone number', required)
+    .form-group.row
+      label.col-md-3.col-form-label.font-weight-bold.text-right(for='phone') Preferred Contact Method
+      .col-md-4
+        .form-check.form-check-inline
+          input#gridRadios1.form-check-input(type='radio', name='email-prefer', value='email', checked='')
+          label.form-check-label(for='email-prefer')
+            | Email
+        .form-check.form-check-inline
+          input#gridRadios2.form-check-input(type='radio', name='phone-prefer', value='phone')
+          label.form-check-label(for='phone-prefer')
+            | Phone
+        .form-check.form-check-inline
+          input#gridRadios2.form-check-input(type='radio', name='skype-prefer', value='skype')
+          label.form-check-label(for='skype-prefer')
+            | Skype
+        .form-check.form-check-inline
+          input#gridRadios2.form-check-input(type='radio', name='google-prefer', value='google')
+          label.form-check-label(for='google-prefer')
+            | Google Hangouts
+        .form-check.form-check-inline
+          input#gridRadios2.form-check-input(type='radio', name='facebook-prefer', value='facebook')
+          label.form-check-label(for='facebook-prefer')
+            | Facebook
+        .form-check.form-check-inline
+          input#gridRadios2.form-check-input(type='radio', name='whatsapp-prefer', value='whatsapp')
+          label.form-check-label(for='whatsapp-prefer')
+            | WhatsApp
+        .form-check.form-check-inline
+          input#gridRadios2.form-check-input(type='radio', name='viber-prefer', value='viber')
+          label.form-check-label(for='viber-prefer')
+            | Viber
+    br
+    br
+    .form-group.row
+      h4.offset-md-3 Location
+    .form-group.row
+      label.col-md-3.col-form-label.font-weight-bold.text-right(for='City') City
+      .col-md-3
+        input.form-control(type='city', name='city', id='city', placeholder='Ottowa', autofocus, autocomplete='city', required)
+    .form-group.row
+      label.col-md-3.col-form-label.font-weight-bold.text-right(for='state') State/Province/Region
+      .col-md-3
+        input.form-control(type='state', name='state', id='state', placeholder='ON', autofocus, autocomplete='state', required)
+    .form-group.row
+      label.col-md-3.col-form-label.font-weight-bold.text-right(for='city') Country
+      .col-md-3
+        input.form-control(type='country', name='country', id='country', placeholder='Canada', autofocus, autocomplete='country', required)
+    .form-group.row
+      label.col-md-3.col-form-label.font-weight-bold.text-right(for='time-zone') Time Zone
+      .col-md-3
+        select#inputState.form-control
+          option(selected='') Greenwich Mean Time (GMT+0:00)
+          option European Central Time (GMT+1:00)
+          option Eastern European Time (GMT+2:00)
+          option Eastern African Time (GMT+3:00)
+          option Middle East Time (GMT+3:30)
+          option Near East Time (GMT+4:00)
+          option Pakistan Lahore Time (GMT+5:00)
+          option India Standard Time (GMT+5:30)
+          option Bangladesh Standard Time (GMT+6:00)
+          option Vietnam Standard Time (GMT+7:00)
+          option China Taiwan Time (GMT+8:00)
+          option Japan Standard Time (GMT+9:00)
+          option Australia Central Time (GMT+9:30)
+          option Australia Eastern Time (GMT+10:00)
+          option Solomon Standard Time (GMT+11:00)
+          option New Zealand Standard Time (GMT+12:00)
+          option Midway Islands Time (GMT-11:00)
+          option Hawaii Standard Time (GMT-10:00)
+          option Alaska Standard Time (GMT-9:00)
+          option Pacific Standard Time (GMT-8:00)
+          option Mountain Standard Time (GMT-7:00)
+          option Central Standard Time (GMT-6:00)
+          option Eastern Standard Time (GMT-5:00)
+          option Puerto Rico and US Virgin Islands Time (GMT-4:00)
+          option Canada Newfoundland Time (GMT-3:30)
+          option Brazil Eastern Time (GMT-3:00)
+          option Central African Time (GMT-1:00)
+    br
+    br
+    .form-group.row
+      h4.offset-md-3 Background and Skills
+    .form-group.row
+      label.col-md-3.col-form-label.font-weight-bold.text-right(for='previous-sponsorships') Number of Previous Sponsorships
+      .col-md-1
+        select#inputState.form-control
+          option(selected='') 0
+          option 1-5
+          option 5-10
+          option 10+
+    .form-group.row
+      label.col-md-3.col-form-label.font-weight-bold.text-right(for='language') Languages
+      .col-md-4
+        .form-check.form-check-inline
+          input#invalidCheck.form-check-input(type='checkbox', name='english', value='english')
+          label.form-check-label(for='invalidCheck')
+            | English
+        .form-check.form-check-inline
+          input#invalidCheck.form-check-input(type='checkbox', name='spanish',  value='spanish')
+          label.form-check-label(for='invalidCheck')
+            | Spanish
+        .form-check.form-check-inline
+          input#invalidCheck.form-check-input(type='checkbox', name='arabic',  value='arabic')
+          label.form-check-label(for='invalidCheck')
+            | Arabic
+        .form-check.form-check-inline
+          input#invalidCheck.form-check-input(type='checkbox', name='french',  value='french')
+          label.form-check-label(for='invalidCheck')
+            | French
+        .form-check.form-check-inline
+          input#invalidCheck.form-check-input(type='checkbox', name='portuguese',  value='portuguese')
+          label.form-check-label(for='invalidCheck')
+            | Portuguese
+        .form-check.form-check-inline
+          input#invalidCheck.form-check-input(type='checkbox', name='chinese',  value='chinese')
+          label.form-check-label(for='invalidCheck')
+            | Chinese
+        .form-check.form-check-inline
+          input#invalidCheck.form-check-input(type='checkbox', name='hindi',  value='hindi')
+          label.form-check-label(for='invalidCheck')
+            | Hindi
+        .form-check.form-check-inline
+          input#invalidCheck.form-check-input(type='checkbox', name='russian',  value='russian')
+          label.form-check-label(for='invalidCheck')
+            | Russian
+    .form-group.row
+      label.col-md-3.col-form-label.font-weight-bold.text-right(for='expertise') Areas of Expertise (or for mentees, areas in which you are seeking mentorship)
       .col-md-7
-        input.form-control(type='password', name='confirmPassword', id='confirmPassword', placeholder='Confirm Password', autocomplete='new-password', required)
+        .form-check.form-check-inline
+          input#invalidCheck.form-check-input(type='checkbox', name='app-process', value='expertise-1')
+          label.form-check-label(for='invalidCheck')
+            | Application process
+        .form-check.form-check-inline
+          input#invalidCheck.form-check-input(type='checkbox', name='pre-depart', value='expertise-2')
+          label.form-check-label(for='invalidCheck')
+            | Logistical support pre-departure
+        .form-check.form-check-inline
+          input#invalidCheck.form-check-input(type='checkbox', name='post-depart', value='expertise-3')
+          label.form-check-label(for='invalidCheck')
+            | Logistical support post-departure
+        .form-check.form-check-inline
+          input#invalidCheck.form-check-input(type='checkbox', name='nav-services', value='expertise-4')
+          label.form-check-label(for='invalidCheck')
+            | Navigating services (e.g. health, education, etc.)
+        .form-check.form-check-inline
+          input#invalidCheck.form-check-input(type='checkbox', name='emo-support', value='expertise-5')
+          label.form-check-label(for='invalidCheck')
+            | Emotional support/guidance
+        .form-check.form-check-inline
+          input#invalidCheck.form-check-input(type='checkbox', name='cross-cultural', value='expertise-6')
+          label.form-check-label(for='invalidCheck')
+            | Cross-cultural communication
+        .form-check.form-check-inline
+          input#invalidCheck.form-check-input(type='checkbox', name='conflict', value='expertise-7')
+          label.form-check-label(for='invalidCheck')
+            | Conflict within your group
+        .form-check.form-check-inline
+          input#invalidCheck.form-check-input(type='checkbox', name='expectations', value='expertise-8')
+          label.form-check-label(for='invalidCheck')
+            | Managing expectations of sponsored refugees and the group
+        .form-check.form-check-inline
+          input#invalidCheck.form-check-input(type='checkbox', name='transition-out', value='expertise-9')
+          label.form-check-label(for='invalidCheck')
+            | Transitioning out of sponsorship
+    .form-group.row
+      label.col-md-3.col-form-label.font-weight-bold.text-right(for='mentees') For Mentors, how many maximum mentees would you accept?
+      .col-md-1
+        select#inputState.form-control
+          option(selected='') 1
+          option 2
+          option 3
+          option 4
+          option 5
     .form-group.offset-sm-3.col-md-7.pl-2
       button.btn.btn-success(type='submit')
-        i.fas.fa-user-plus.fa-sm
-        | Signup
+        | Submit
