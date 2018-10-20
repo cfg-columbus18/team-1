@@ -13,6 +13,8 @@
           a.nav-link(href='/learn') Learn
         li.nav-item(class=(title === 'Find A Mentor') ? 'active' : undefined)
           a.nav-link(href='/find') Find A Mentor
+        li.nav-item(class=(title === 'Forum') ? 'active' : undefined)
+          a.nav-link(href='/connect') Forum
       ul.nav.navbar-nav.ml-auto
         if !user
           li.nav-item(class=(title === 'Log In') ? 'active' : undefined)
