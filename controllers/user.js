@@ -91,12 +91,60 @@ exports.postSignup = (req, res, next) => {
     req.flash('errors', errors);
     return res.redirect('/signup');
   }
-
+  console.log(req.body);
+  var exp = [];
+  var comm = [];
+  var lang = [];
+    
+  for (const prop in req.body){
+      
+      if (prop == 'app-process') exp.push('Application process');
+      if (prop == 'pre-depart') exp.push('Logistical support pre-departure');
+      if (prop == 'post-depart') exp.push('Logistical support post-departure');
+      if (prop == 'nav-services') exp.push('Navigating services');
+      if (prop == 'emo-support') exp.push('Emotional support/guidance');
+      if (prop == 'cross-cultural') exp.push('Cross-cultural communication');
+      if (prop == 'conflict') exp.push('Conflict within your group');
+      if (prop =='expectations') exp.push('Managing expectations of sponsored refugees and the group');
+      if (prop =='transition-out') exp.push('Transitioning out of sponsorship');
+      
+      if (prop =='email-prefer') comm.push('email');
+      if (prop =='facebook-prefer') comm.push('facebook');
+      if (prop =='phone-prefer') comm.push('phone');
+      if (prop =='skype-prefer') comm.push('skype');
+      if (prop =='whatsapp-prefer') comm.push('whatsapp');
+      if (prop =='google-prefer') comm.push('google');
+      if (prop =='viber-prefer') comm.push('viber');
+      
+      if (prop =='english') lang.push('English');
+      if (prop =='chinese') lang.push('Chinese');
+      if (prop =='spanish') lang.push('Spanish');
+      if (prop =='french') lang.push('French');
+      if (prop =='russian') lang.push('Russian');
+  
+  }
+    
+  tz = parseInt(req.body.timezone.substring(req.body.timezone.lastIndexOf('T')+1,req.body.timezone.lastIndexOf('T')+3 ));
+  
+  console.log(tz);
+  console.log(exp);
   const user = new User({
     email: req.body.email,
-    password: req.body.password
+    password: req.body.password,
+    firstName: req.body['first-name'],
+    lastName: req.body['last-name'],
+    phone: req.body.phone,
+    city: req.body.city,
+    state: req.body.state,
+    country: req.body.country,
+    num_mentee: req.body.num_mentee,
+    contact: comm,
+    expertise: exp,
+    sponsoring: req.body.sponsored,
+    language: lang,
+    time_zone: tz
   });
-
+  
   User.findOne({ email: req.body.email }, (err, existingUser) => {
     if (err) { return next(err); }
     if (existingUser) {
