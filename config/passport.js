@@ -4,6 +4,7 @@ const { Strategy: InstagramStrategy } = require('passport-instagram');
 const { Strategy: LocalStrategy } = require('passport-local');
 const { Strategy: FacebookStrategy } = require('passport-facebook');
 const { Strategy: TwitterStrategy } = require('passport-twitter');
+//github
 const { Strategy: GitHubStrategy } = require('passport-github');
 const { OAuth2Strategy: GoogleStrategy } = require('passport-google-oauth');
 const { Strategy: LinkedInStrategy } = require('passport-linkedin-oauth2');
@@ -120,7 +121,8 @@ passport.use(new FacebookStrategy({
 /**
  * Sign in with GitHub.
  */
-passport.use(new GitHubStrategy({
+//GITHUB
+ passport.use(new GitHubStrategy({
   clientID: process.env.GITHUB_ID,
   clientSecret: process.env.GITHUB_SECRET,
   callbackURL: '/auth/github/callback',
