@@ -18,7 +18,7 @@ exports.mentorslist = (req,res) => {
 
 exports.findMentor = (req,res) => {
 	console.log("It is reaching here");
-	User.find({language: req.language,type:1}, (err,users) =>{
+	User.find({type:1}, (err,users) =>{
 		if(err){ return console.log(err); }
 		console.log(users);
 		res.render('mentorslist', {
