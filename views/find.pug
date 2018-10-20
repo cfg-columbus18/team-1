@@ -2,7 +2,8 @@ extends layout
 
 block content
   .pb-2.mt-2.mb-4.border-bottom
-    h3 Find A Mentor: 
+    br
+    h3(style='color: #00c8cc') Find A Mentor: 
     p Search below to find a mentor based on desired language, country, and expertise. Find a mentor according to your personal preferences!
 
   form(method='get', action='/findMentor')
@@ -17,56 +18,82 @@ block content
       col-md-8.p-1
         //- input.form-control(type='text',name='expertise',id='expertise',autocomplete='expertise',autofocus=true, placeholder='Expertise')
         //- select#propertyType.select.form-control.input-lg(form='addProperty', name='propertyType')
-        p 
-        h5 Select the expertise most important to you in a mentor: 
-        .form-check.form-check-inline
+        br
+    .form-group.row
+      h5 Select the expertise most important to you in a mentor: 
+    .form-group.row
+      .card.mb-3(style='width: 10rem;background:#e9ecef;margin:1rem')
+        .card-header.form-check.form-check-inline
           input#invalidCheck.form-check-input(type='checkbox', value='expertise-1')
-          label.form-check-label(for='invalidCheck')
-            | Application process
-        |
-        br
-        .form-check.form-check-inline
+        .card-body
+          h5.card-title Application Process
+          p.card-text
+            | Support through immigration application process and legal advice.
+
+      .card.mb-3(style='width: 10rem;background:#e9ecef;margin:1rem')
+        .card-header.form-check.form-check-inline
           input#invalidCheck.form-check-input(type='checkbox', value='expertise-2')
-          label.form-check-label(for='invalidCheck')
-            | Logistical support pre-departure
-        br    
-        .form-check.form-check-inline
+        .card-body
+          h5.card-title Pre-Departure
+          p.card-text
+            | Logistical preparation for travel and housing upon arrival.
+
+      .card.mb-3(style='width: 10rem;background:#e9ecef;margin:1rem')
+        .card-header.form-check.form-check-inline
           input#invalidCheck.form-check-input(type='checkbox', value='expertise-3')
-          label.form-check-label(for='invalidCheck')
-            | Logistical support post-departure
-        br
-        .form-check.form-check-inline
+        .card-body
+          h5.card-title Post-Departure
+          p.card-text
+            | Logistical preparation for arrival and airport/customs navigation.
+
+      .card.mb-3(style='width: 10rem;background:#e9ecef;margin:1rem')
+        .card-header.form-check.form-check-inline
           input#invalidCheck.form-check-input(type='checkbox', value='expertise-4')
-          label.form-check-label(for='invalidCheck')
-            | Navigating services (e.g. health, education, etc.)
-        br
-        .form-check.form-check-inline
+        .card-body
+          h5.card-title Navigating Services
+          p.card-text
+            | Support in day-to-day essential services, such as education, daycare, health, shopping, and local travel.
+
+      .card.mb-3(style='width: 10rem;background:#e9ecef;margin:1rem')
+        .card-header.form-check.form-check-inline
           input#invalidCheck.form-check-input(type='checkbox', value='expertise-5')
-          label.form-check-label(for='invalidCheck')
-            | Emotional support/guidance
-        br
-        .form-check.form-check-inline
+        .card-body
+          h5.card-title Emotional Support
+          p.card-text
+            | Maintaining mental health and well-being through the stress of a new environment.
+
+      .card.mb-3(style='width: 10rem;background:#e9ecef;margin:1rem')
+        .card-header.form-check.form-check-inline
           input#invalidCheck.form-check-input(type='checkbox', value='expertise-6')
-          label.form-check-label(for='invalidCheck')
-            | Cross-cultural communication
-        br
-        .form-check.form-check-inline
+        .card-body
+          h5.card-title Cross-Cultural Communication
+          p.card-text
+            | Translation, language services, and cultural norms.
+
+      .card.mb-3(style='width: 10rem;background:#e9ecef;margin:1rem')
+        .card-header.form-check.form-check-inline
           input#invalidCheck.form-check-input(type='checkbox', value='expertise-7')
-          label.form-check-label(for='invalidCheck')
-            | Conflict within your group
-        br
-        .form-check.form-check-inline
+        .card-body
+          h5.card-title Group Conflict
+          p.card-text
+            | Resolving conflicts developing within or external to your sponsor group.
+
+      .card.mb-3(style='width: 10rem;background:#e9ecef;margin:1rem')
+        .card-header.form-check.form-check-inline
           input#invalidCheck.form-check-input(type='checkbox', value='expertise-8')
-          label.form-check-label(for='invalidCheck')
-            | Managing expectations of sponsored refugees and the group
-        br
-        .form-check.form-check-inline
+        .card-body
+          h5.card-title Managing Expectations
+          p.card-text
+            | Communicating community and sponsorship scope to refugees.
+
+      .card.mb-3(style='width: 10rem;background:#e9ecef;margin:1rem')
+        .card-header.form-check.form-check-inline
           input#invalidCheck.form-check-input(type='checkbox', value='expertise-9')
-          label.form-check-label(for='invalidCheck')
-            | Transitioning out of sponsorship
-      col-md-8.p-1
-        p
-        button.btn.btn-primary(type='Submit')
-          | Search
-
-
+        .card-body
+          h5.card-title Transitioning Out
+          p.card-text
+            | Developing your sponsor group's independence.
+        br
+    .form-group.row
+      button.btn.btn-dark(type='Search', style="background-color: #00c8cc")
+        | Search

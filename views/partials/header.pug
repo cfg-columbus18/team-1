@@ -1,7 +1,7 @@
 .navbar.navbar-light.fixed-top.navbar-expand-md
   .container
-    a.navbar-brand(href='/')
-      | TITLE HERE
+    a.navbar-brand.border(href='/' style='padding:1rem; margin:1rem;')
+      | Refugee Road
     button.navbar-toggler(type='button', data-toggle='collapse', data-target='.navbar-collapse')
       span.sr-only Toggle navigation
       span.navbar-toggler-icon
@@ -13,6 +13,8 @@
           a.nav-link(href='/learn') Learn
         li.nav-item(class=(title === 'Find A Mentor') ? 'active' : undefined)
           a.nav-link(href='/find') Find A Mentor
+        li.nav-item(class=(title === 'Forum') ? 'active' : undefined)
+          a.nav-link(href='/connect') Forum
       ul.nav.navbar-nav.ml-auto
         if !user
           li.nav-item(class=(title === 'Log In') ? 'active' : undefined)
