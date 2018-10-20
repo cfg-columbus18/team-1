@@ -2,6 +2,7 @@ extends layout
 
 block content
   .pb-2.mt-2.mb-4.border-bottom
+    br
     h3(style='color: #00c8cc') Find A Mentor: 
     p Search below to find a mentor based on desired language, country, and expertise. Find a mentor according to your personal preferences!
 
@@ -17,8 +18,11 @@ block content
       col-md-8.p-1
         //- input.form-control(type='text',name='expertise',id='expertise',autocomplete='expertise',autofocus=true, placeholder='Expertise')
         //- select#propertyType.select.form-control.input-lg(form='addProperty', name='propertyType')
-        p 
-        h5 Select the expertise most important to you in a mentor: 
+        br
+    .form-group.row
+      h5 Select the expertise most important to you in a mentor: 
+    .form-group.row
+      .col-8
         .form-check.form-check-inline
           input#invalidCheck.form-check-input(type='checkbox', value='expertise-1')
           label.form-check-label(for='invalidCheck')
@@ -56,7 +60,7 @@ block content
           input#invalidCheck.form-check-input(type='checkbox', value='expertise-9')
           label.form-check-label(for='invalidCheck')
             | Transitioning out of sponsorship
-      col-md-8.p-1
-        p
-        button.btn.btn-dark(type='Search', style="background-color: #00c8cc")
-          | Search
+        br
+    .form-group.row
+      button.btn.btn-dark(type='Search', style="background-color: #00c8cc")
+        | Search
