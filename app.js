@@ -31,7 +31,7 @@ dotenv.load({ path: '.env.example' });
  * Controllers (route handlers).
  */
 const homeController = require('./controllers/home');
-// const findController = require('./controllers/find');
+const findController = require('./controllers/find');
 const learnController = require('./controllers/learn');
 const userController = require('./controllers/user');
 const apiController = require('./controllers/api');
@@ -129,7 +129,7 @@ app.use('/webfonts', express.static(path.join(__dirname, 'node_modules/@fortawes
  */
 app.get('/', homeController.index);
 app.get('/about', homeController.about);
-app.get('/find', homeController.find);
+app.get('/find', findController.find);
 app.get('/learn', learnController.learn);
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);

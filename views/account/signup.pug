@@ -3,20 +3,47 @@ extends ../layout
 block content
   .pb-2.mt-2.mb-4.border-bottom
     h3 Sign up
+    p Thank you so much for your interest in supporting refugees. In order to find the best matches between mentors and mentees, please provide as much information below as possible.  
   form(id='signup-form', method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
     .form-group.row
-      label.col-md-3.col-form-label.font-weight-bold.text-right(for='email') Email
-      .col-md-7
-        input.form-control(type='email', name='email', id='email', placeholder='Email', autofocus, autocomplete='email', required)
+      h4 User Information
+    .form-group.row
+      label.col-md-3.col-form-label.font-weight-bold.text-right(for='username') Username
+      .col-md-4
+        input.form-control(type='username', name='username', id='username', placeholder='username', autofocus, autocomplete='username', required)
     .form-group.row
       label.col-md-3.col-form-label.font-weight-bold.text-right(for='password') Password
-      .col-md-7
-        input.form-control(type='password', name='password', id='password', placeholder='Password', autocomplete='new-password', required)
+      .col-md-4
+        input.form-control(type='password', name='password', id='password', placeholder='password', autocomplete='new-password', required)
     .form-group.row
       label.col-md-3.col-form-label.font-weight-bold.text-right(for='confirmPassword') Confirm Password
-      .col-md-7
-        input.form-control(type='password', name='confirmPassword', id='confirmPassword', placeholder='Confirm Password', autocomplete='new-password', required)
+      .col-md-4
+        input.form-control(type='password', name='confirmPassword', id='confirmPassword', placeholder='confirm password', autocomplete='new-password', required)
+    .form-group.row
+      h4 Personal Information
+    .form-group.row
+      label.col-md-3.col-form-label.font-weight-bold.text-right(for='name') Name
+      .col-md-3
+        input.form-control(type='name', name='first-name', id='first-name', placeholder='first name', autofocus, autocomplete='john', required)
+      .col-md-3
+        input.form-control(type='name', name='last-name', id='last-name', placeholder='last name', autofocus, autocomplete='smith', required)
+    .form-group.row
+      label.col-md-3.col-form-label.font-weight-bold.text-right(for='email') Email
+      .col-md-6
+        input.form-control(type='email', name='email', id='email', placeholder='email', autofocus, autocomplete='email', required)
+    .form-group.row
+      label.col-md-3.col-form-label.font-weight-bold.text-right(for='phone') Phone Number
+      .col-md-3
+        input.form-control(type='phone', name='phone', id='phone', placeholder='phone', autofocus, autocomplete='phone number', required)
+    .form-group.row
+      label.col-md-3.col-form-label.font-weight-bold.text-right(for='phone') City
+      .col-md-3
+        input.form-control(type='city', name='city', id='city', placeholder='Ottowa', autofocus, autocomplete='city', required)
+      label.col-md-3.col-form-label.font-weight-bold.text-left(for='city') City
+      .col-md-3
+        input.form-control(type='state', name='state', id='state', placeholder='ON', autofocus, autocomplete='state', required)
+        input.form-control(type='country', name='country', id='country', placeholder='Canada', autofocus, autocomplete='country', required)
     .form-group.offset-sm-3.col-md-7.pl-2
       button.btn.btn-success(type='submit')
         i.fas.fa-user-plus.fa-sm
