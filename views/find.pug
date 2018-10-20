@@ -3,7 +3,6 @@ extends layout
 block content
   .pb-2.mt-2.mb-4.border-bottom
     br
-    h3 Find A Mentor: 
     h3(style='color: #00c8cc') Find A Mentor: 
     p Search below to find a mentor based on desired language, country, and expertise. Find a mentor according to your personal preferences!
 
@@ -63,11 +62,5 @@ block content
             | Transitioning out of sponsorship
         br
     .form-group.row
-      button.btn.btn-primary(type='Submit')
+      button.btn.btn-dark(type='Search', style="background-color: #00c8cc")
         | Search
-
-
-      col-md-8.p-1
-        p
-        button.btn.btn-dark(type='Search', style="background-color: #00c8cc")
-          | Search
