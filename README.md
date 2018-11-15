@@ -19,3 +19,4 @@ Go to the directory where the project is stored, and type the command node app.j
 ### Thank you
 Special thanks to JPMorgan and Refugee Hub for giving us the wonderfully rewarding and fun opportunity to deveop an app from scratch for a great cause!
 
+The code ("Code") in this repository was created solely by the student teams during a coding competition hosted by JPMorgan Chase Bank, N.A. ("JPMC").	JPMC did not create or contribute to the development of the Code. This Code is provided AS IS and JPMC makes no warranty of any kind, express or implied, as to the Code,	including but not limited to, merchantability, satisfactory quality, non-infringement, title or fitness for a particular purpose or use.
